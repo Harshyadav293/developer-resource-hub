@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Resource Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Developer Resource Hub</h1>
+      <p>Find useful tools, websites and tutorials for development.</p>
+    </div>
+    <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode">🌙 Dark</button>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="searchInput" type="search" placeholder="Search resources..." aria-label="Search resources">
+      <select id="categoryFilter" aria-label="Filter by category">
+        <option value="All">All Categories</option>
+        <option value="Web Dev">Web Dev</option>
+        <option value="App Dev">App Dev</option>
+        <option value="AI/ML">AI/ML</option>
+        <option value="Tools">Tools</option>
+      </select>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span id="resourceCount">0</span>
+        <small>Resources</small>
+      </div>
+      <div class="stat-card">
+        <span id="categoryCount">4</span>
+        <small>Categories</small>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <h2>Resources</h2>
+        <button id="showFormBtn" class="primary-btn">+ Add Resource</button>
+      </div>
+      <div id="resourceGrid" class="resource-grid"></div>
+      <p id="emptyState" class="empty" hidden>No resources found. Try another search or add a resource.</p>
+    </section>
+
+    <section id="formSection" class="form-card" hidden>
+      <div class="section-heading">
+        <h2>Add a Resource</h2>
+        <button id="closeFormBtn" class="close-btn" aria-label="Close form">×</button>
+      </div>
+      <form id="resourceForm">
+        <div class="form-grid">
+          <label>
+            Title
+            <input id="title" required maxlength="80" placeholder="e.g. MDN Web Docs">
+          </label>
+          <label>
+            Category
+            <select id="category" required>
+              <option value="Web Dev">Web Dev</option>
+              <option value="App Dev">App Dev</option>
+              <option value="AI/ML">AI/ML</option>
+              <option value="Tools">Tools</option>
+            </select>
+          </label>
+          <label class="full">
+            Description
+            <textarea id="description" required maxlength="220" placeholder="What is this resource useful for?"></textarea>
+          </label>
+          <label class="full">
+            Link
+            <input id="link" type="url" required placeholder="https://example.com">
+          </label>
+        </div>
+        <button class="primary-btn" type="submit">Save Resource</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>Developer Resource Hub • Built with HTML, CSS & JavaScript</footer>
+  <script src="script.js"></script>
+</body>
+</html>
