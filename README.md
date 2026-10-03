@@ -95,6 +95,12 @@ Developer-Resource-Hub/
 
 **Bonus:** I added upvotes and a dark/light mode toggle. Both update the UI and use `localStorage` where persistence is needed.
 
+## Live Demo
+
+**Production URL:** https://developer-resource-hub-mauve.vercel.app/
+
+The live deployment is hosted on Vercel.
+
 ## Submission checklist
 
 - [ ] Push all files to a **public GitHub repository**.
@@ -104,3 +110,4 @@ Developer-Resource-Hub/
 - [ ] Complete `AUDIT.md` after manually checking the GDG AITR portal on desktop and mobile.
 - [ ] Test search, category filter, add resource, refresh persistence, upvote and dark/light mode on the live site.
 - [ ] Be ready to explain every JavaScript function during the interview.
+every JavaScript function during the interview.
